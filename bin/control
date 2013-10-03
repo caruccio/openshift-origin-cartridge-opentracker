@@ -1,0 +1,80 @@
+#!/bin/bash -e
+
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+cartridge_type="opentracker"
+OPENSHIFT_OPENTRACKER_PIDFILE=$OPENSHIFT_OPENTRACKER_DIR/run/opentracker.pid
+
+function isrunning() {
+    # Check for running app
+    pid=$(<$OPENSHIFT_OPENTRACKER_PIDFILE)
+    if [ -n "$pid" -a kill -0 "$pid" ]
+    then
+        return 0
+    fi
+    # not running
+    return 1
+}
+
+function start() {
+ 	echo "Starting $cartridge_type cart"
+
+  if isrunning
+  then
+    echo "Application is already running!" 1>&2
+    exit 0
+  fi
+  nohup $OPENSHIFT_OPENTRACKER_DIR/bin/opentracker -f $OPENSHIFT_OPENTRACKER_DIR/configuration/opentracker.conf &
+}
+
+function stop() {
+ 	echo "Stopping $cartridge_type cart"
+ 	
+  if isrunning
+  then
+    kill -TERM $pid > /dev/null 2>&1
+    wait_for_stop $pid
+  else
+    echo "Application is already stopped!" 1>&2
+  fi
+}
+
+function restart() {
+  echo "Restarting $cartridge_type cart"
+
+  stop
+  start
+}
+
+function status() {
+   if isrunning
+   then
+      client_result "Application is running"
+   else
+      client_result "Application is either stopped or inaccessible"
+   fi
+}
+
+function reload() {
+    echo "Reloading $cartridge_type cart"
+    restart
+}
+
+# Clean up any log files
+function tidy() {
+  #client_message "Emptying log dir: $OPENSHIFT_JENKINS_LOG_DIR"
+  #shopt -s dotglob
+  #rm -rf $OPENSHIFT_JENKINS_LOG_DIR/*
+}
+
+
+case "$1" in
+  start)     	start ;;
+  stop)      	stop ;;
+  restart)   	restart ;;
+  status)    	status ;;
+  reload)    	reload ;;
+  tidy)      	tidy ;;
+  *)         	exit 0
+esac
+
