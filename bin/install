@@ -12,3 +12,5 @@ client_result "OpenTracker created successfully."
 client_result ""
 client_result "  Listen address: $OPENSHIFT_APP_DNS"
 client_result ""
+
+add_domain_env_var "OPENTRACKER_URL=http://${OPENSHIFT_GEAR_DNS}/"
