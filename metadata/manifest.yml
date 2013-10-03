@@ -9,6 +9,7 @@ Cartridge-Version: 0.0.1
 Cartridge-Vendor: caruccio
 Categories:
   - service
+  - torrenttracker
   - web_framework
 Group-Overrides:
   - components:
