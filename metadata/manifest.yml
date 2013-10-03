@@ -28,6 +28,8 @@ Provides:
   - "opentracker"
   - "opentracker(version) = 1.238"
 Publishes:
+  publish-http-url:
+    Type: "NET_TCP:httpd-proxy-info"
   publish-gear-endpoint:
     Type: "NET_TCP:gear-endpoint-info"
 Endpoints:
