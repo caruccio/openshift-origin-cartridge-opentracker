@@ -9,11 +9,11 @@ Cartridge-Version: 0.0.1
 Cartridge-Vendor: caruccio
 Categories:
   - service
-  - torrenttracker
+  - bt_tracker
   - web_framework
 Group-Overrides:
   - components:
-    - opentracker-1.0
+    - opentracker-1.238
     - web_proxy
 Website: https://erdgeist.org/arts/software/opentracker/
 Cart-Data:
