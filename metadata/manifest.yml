@@ -9,9 +9,9 @@ Cartridge-Version: 0.0.1
 Cartridge-Vendor: caruccio
 Source-Url: https://github.com/caruccio/openshift-origin-cartridge-opentracker/archive/master.zip
 Categories:
-  - web_framework
+  - service
   - instant_app
-  - domain_scope
+  - embedded
 Website: https://erdgeist.org/arts/software/opentracker/
 Cart-Data:
   - Key: OPENSHIFT_OPENTRACKER_PORT
@@ -30,12 +30,6 @@ Endpoints:
     Private-Port-Name: PORT
     Private-Port:      8080
     Public-Port-Name:  PROXY_PORT
-    Mappings:
-      - Frontend:      ""
-        Backend:       ""
-      - Frontend:      "/health"
-        Backend:       ""
-        Options:       { health: true }
 Scaling:
   Min: 1
   Max: 1
