@@ -7,6 +7,7 @@ License: Beerware license
 License-Url: https://erdgeist.org/arts/software/opentracker/
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: caruccio
+Source-Url: https://github.com/caruccio/openshift-origin-cartridge-opentracker/archive/master.zip
 Categories:
   - web_framework
   - instant_app
