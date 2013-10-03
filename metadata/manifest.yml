@@ -9,9 +9,9 @@ Cartridge-Version: 0.0.1
 Cartridge-Vendor: caruccio
 Source-Url: https://github.com/caruccio/openshift-origin-cartridge-opentracker/archive/master.zip
 Categories:
-  - service
+  - web_framework
   - instant_app
-  - embedded
+  - domain_scope
 Website: https://erdgeist.org/arts/software/opentracker/
 Cart-Data:
   - Key: OPENSHIFT_OPENTRACKER_PORT
