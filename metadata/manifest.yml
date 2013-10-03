@@ -8,9 +8,8 @@ License-Url: https://erdgeist.org/arts/software/opentracker/
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: caruccio
 Categories:
+  - service
   - web_framework
-  - instant_app
-  - domain_scope
 Website: https://erdgeist.org/arts/software/opentracker/
 Cart-Data:
   - Key: OPENSHIFT_OPENTRACKER_PORT
