@@ -7,7 +7,7 @@ OPENSHIFT_OPENTRACKER_PIDFILE=$OPENSHIFT_OPENTRACKER_DIR/run/opentracker.pid
 
 function isrunning() {
     # Check for running app
-    pid=$(<$OPENSHIFT_OPENTRACKER_PIDFILE)
+    pid=`cat $OPENSHIFT_OPENTRACKER_PIDFILE 2>/dev/null || true`
     if [ -n "$pid" ] && kill -0 "$pid"
     then
         return 0
