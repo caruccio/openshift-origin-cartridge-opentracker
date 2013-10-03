@@ -18,10 +18,10 @@ Group-Overrides:
 Website: https://erdgeist.org/arts/software/opentracker/
 Cart-Data:
   - Key: OPENSHIFT_OPENTRACKER_PORT
-    Type: environment
+    Type: cart_data
     Description: "Internal port to which the web-framework binds to."
   - Key: OPENSHIFT_OPENTRACKER_IP
-    Type: environment
+    Type: cart_data
     Description: "Internal IP to which the web-framework binds to."
 Provides:
   - opentracker-1.238
