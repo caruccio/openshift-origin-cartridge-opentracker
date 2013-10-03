@@ -33,12 +33,6 @@ Endpoints:
     Private-Port-Name: PORT
     Private-Port:      8080
     Public-Port-Name:  PROXY_PORT
-    Mappings:
-      - Frontend:      ""
-        Backend:       ""
-      - Frontend:      "/health"
-        Backend:       ""
-        Options:       { health: true }
 Scaling:
   Min: 1
   Max: 1
