@@ -10,6 +10,10 @@ Cartridge-Vendor: caruccio
 Categories:
   - service
   - web_framework
+Group-Overrides:
+  - components:
+    - opentracker-1.0
+    - web_proxy
 Website: https://erdgeist.org/arts/software/opentracker/
 Cart-Data:
   - Key: OPENSHIFT_OPENTRACKER_PORT
