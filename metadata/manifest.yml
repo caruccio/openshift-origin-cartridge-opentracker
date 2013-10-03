@@ -28,6 +28,8 @@ Provides:
   - "opentracker"
   - "opentracker(version) = 1.238"
 Publishes:
+  publish-gear-endpoint:
+    Type: "NET_TCP:gear-endpoint-info"
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: PORT
