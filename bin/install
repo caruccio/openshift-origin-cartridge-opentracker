@@ -10,5 +10,5 @@ source $OPENSHIFT_CARTRIDGE_SDK_BASH
 client_result ""
 client_result "OpenTracker created successfully."
 client_result ""
-client_result "  Listen address: $OPENSHIFT_OPENTRACKER_HOST:$OPENSHIFT_OPENTRACKER_PORT"
+client_result "  Listen address: $OPENSHIFT_APP_DNS"
 client_result ""
